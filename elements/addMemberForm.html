@@ -1,9 +1,17 @@
 <aside class="grid-item">
-  <form action="index.php" method="get">
-    <section><input type="text" placeholder="Name"></section>
-    <section><input type="text" placeholder="Surame"></section>
-    <section><input type="email" placeholder="Email adress"></section>
-    <section><textarea name="name" rows="3" cols="30" placeholder="Your opinion"></textarea></section>
+  <form action="index.php" method="post">
+    <section>
+      <input name='name' type="text" placeholder="Name" required>
+    </section>
+    <section>
+      <input name='surname' type="text" placeholder="Surame" required>
+    </section>
+    <section>
+      <input name='email' type="email" placeholder="Email adress" pattern=".*@.*\..+" required>
+    </section>
+    <section>
+      <textarea name="opinion" rows="3" cols="30" placeholder="Your opinion" required></textarea>
+    </section>
     <input type="submit" id='memberFormSubmit' value="Add member"></input>
   </form>
 </aside>

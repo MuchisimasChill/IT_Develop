@@ -8,7 +8,6 @@
   }
   $sql = "SELECT memberName, memberSurname, memberID FROM members";
   $result = mysqli_query($conn, $sql);
-
   $pageEnd = 5 * $page;
   $pageStart = $pageEnd - 5;
   if(mysqli_num_rows($result) < $pageEnd) {
@@ -23,6 +22,15 @@
     array_push($namesArray, $memberData['memberName']);
     array_push($surnamesArray, $memberData['memberSurname']);
     array_push($idArray, $memberData['memberID']);
+  }
+  if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $surname = $_POST["surname"];
+    $email = $_POST["email"];
+    $opinion = $_POST["opinion"];
+    $sql = "INSERT INTO `members`(`memberName`, `memberSurname`, `memberEmail`, `memberContent`) VALUES ('"
+      . $name . "','" . $surname . "','" . $email . "','" . $opinion . "')";
+    mysqli_query($conn, $sql);
   }
 
   function pageManager($page){

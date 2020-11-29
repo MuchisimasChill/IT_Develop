@@ -11,7 +11,7 @@
     <div class="grid-container-memberContent">
       <?php include 'elements/header.html'; ?>
       <?php include 'elements/menu.html' ?>
-      <?php include 'elements/aboutInformation.html' ?>
+      <?php include 'elements/aboutInformation.html'?>
       <?php include 'elements/footer.html' ?>
     </div>
   </body>
