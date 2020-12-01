@@ -24,6 +24,11 @@
         <li>
           <a href=<?php echo $loginButtonHref ?>> <?php echo $loginButtonText ?> </a>
         </li>
+        <?php if(isset($_SESSION['valid'])) { ?>
+          <li>
+            <a href="admin_page.php" title="Admin Page"> Admin Page</a>
+          </li>
+        <?php } ?>
       </ul>
     </div>
 </header>
