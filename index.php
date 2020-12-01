@@ -6,7 +6,7 @@
   }else{
     $page = 1;
   }
-  $sql = "SELECT memberName, memberSurname, memberID FROM members";
+  $sql = "SELECT * FROM members";
   $result = mysqli_query($conn, $sql);
   $pageEnd = 5 * $page;
   $pageStart = $pageEnd - 5;
@@ -80,7 +80,7 @@
 <body>
   <div class="grid-container">
     <?php
-      include 'elements/header.html';
+      include 'elements/header.php';
       include 'elements/menu.html';
       include 'elements/addMemberForm.html';
       include 'elements/memberList.php';

@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="grid-container-memberContent">
-      <?php include 'elements/header.html'; ?>
+      <?php include 'elements/header.php'; ?>
       <?php include 'elements/menu.html' ?>
       <?php include 'elements/contact_us.html'?>
       <?php include 'elements/footer.html' ?>
