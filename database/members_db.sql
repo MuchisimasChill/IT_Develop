@@ -8,9 +8,9 @@
 -- Версия PHP: 7.4.9
 
 
-CREATE USER IF NOT EXISTS 'MemberBook'@'localhost' IDENTIFIED BY 'the_password';
-GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'localhost';
-FLUSH PRIVILEGES;
+use mysql;
+update user set user='admin' where user='root';
+flush privileges;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
